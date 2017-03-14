@@ -156,7 +156,7 @@ public class ServerAgentThread extends Thread {
 			String nl="<#NICK_LIST#>";
 			for (int i = 0; i < size; i++) {
 				ServerAgentThread satTemp=tempv.get(i);
-				satTemp.dout.writeUTF("<#MSG#>"+this.getName()+"������......");
+				satTemp.dout.writeUTF("<#MSG#>"+this.getName()+"下线了......");
 				nl=nl+"|"+satTemp.getName();  
 			}
 			for (int i = 0; i < size; i++) { 
@@ -204,7 +204,7 @@ public class ServerAgentThread extends Thread {
 					ServerAgentThread satTemp=tempv.get(i);
 					satTemp.dout.writeUTF(nickListMsg);
 					if(satTemp!=this){
-						satTemp.dout.writeUTF("<#MSG#>"+this.getName()+"������.....");
+						satTemp.dout.writeUTF("<#MSG#>"+this.getName()+"上线了.....");
 					}
 				}
 				
